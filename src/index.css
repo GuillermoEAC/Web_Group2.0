@@ -1,0 +1,57 @@
+/* index.css */
+/* ========================================= */
+/* 1. IMPORTACIÓN DE FUENTES */
+/* ========================================= */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+/* ========================================= */
+/* 2. DIRECTIVAS DE TAILWIND */
+/* ========================================= */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================= */
+/* 3. ESTILOS BASE Y UTILIDADES */
+/* ========================================= */
+
+html {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* La fuente se establece aquí como fallback, aunque Tailwind la toma de tailwind.config.js */
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Transición para el carrusel */
+.carousel-transition {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========================================= */
+/* 4. CLASES DE COMPONENTE (@apply) */
+/* ========================================= */
+
+/* Clase de título principal para secciones */
+.section-title {
+  /* Usa el Azul Marino de la marca */
+  @apply text-4xl font-extrabold text-brand-dark mb-4;
+}
+
+/* Botón Primario: Acento (Verde de la marca) */
+.btn-primary-fomex {
+  /* Color: Verde Principal (#00C87C) */
+  @apply bg-brand-green hover:bg-opacity-90 text-white font-semibold py-3 px-7 rounded-full shadow-lg transition duration-300 flex items-center text-base;
+}
+
+/* Botón Secundario: Contraste (Azul Marino de la marca) */
+.btn-secondary-fomex {
+  /* Color: Azul Marino (#00003C) */
+  @apply text-brand-dark border-2 border-brand-dark hover:bg-brand-dark hover:text-white font-semibold py-3 px-7 rounded-full transition duration-300 text-base shadow-lg;
+}
