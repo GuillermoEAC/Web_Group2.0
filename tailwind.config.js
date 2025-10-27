@@ -5,30 +5,29 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // PALETA DE COLORES OFICIALES (RGB Convertido a HEX)
+      // PALETA DE COLORES OFICIALES ACTUALIZADA
       colors: {
         brand: {
-          // AZUL MARINO (R:0, G:0, B:60) - Para títulos, fondos oscuros, botones secundarios.
-          dark: "#00003C",
-          // VERDE PRINCIPAL (R:0, G:200, B:124) - Para acentos, iconos y botones primarios.
+          // AZUL MARINO OFICIAL (R:0, G:50, B:96) - Fondo, títulos, navegación.
+          dark: "#003260",
+          // VERDE ESMERALDA (Mantenido) - Acentos, botones primarios.
           green: "#00C87C",
         },
+
         // Colores de fondos de sección de baja intensidad
-        "fomex-blue": {
-          50: "#eef6ff", // Degradado en inicio
-          100: "#e6f0f7", // Fondo Sección Empresas
+        "fomex-bg-light": {
+          DEFAULT: "#F4F7FB", // Gris muy claro para secciones
         },
-        "fomex-light": {
-          50: "#fff5f5", // Fondo Sección Contacto (el antiguo bg-red-50)
-        },
-        // Se mantiene el gris para textos generales de forma opcional
+
+        // Grises para textos (Puedes usar los grises estándar de Tailwind si lo deseas)
         gray: {
           ...require("tailwindcss/colors").gray,
-          700: "#374151",
+          700: "#4A4A4A", // Gris de texto oficial
           900: "#111827",
         },
       },
-      // Configuración de la fuente global
+
+      // Configuración de la fuente global (Inter es una excelente opción moderna)
       fontFamily: {
         sans: ["Inter", "sans-serif"],
       },
